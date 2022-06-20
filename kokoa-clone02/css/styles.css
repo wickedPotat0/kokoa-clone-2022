@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import "reset.css"; /* 브러우저 내 기본 스타일을 제거 */
+@import "variables.css"; /*기본 노란 색깔을 변경함. */
+
+/* 스타일 시트를 나눠서 관리함. */
+/* components */
+@import "components/status-bar.css"; /* status-bar */
+@import "components/nav-bar.css"; /*3번째 화면의 하단 바 */
+@import "components/screen-header.css";
+@import "components/user-components.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
+
+/* screens */
+@import "screens/login-form.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+
+/* 세미콜론(;)을 잘 찍자. 자꾸 놓침 */
+
+
+body {
+    color: #2e363e;
+    font-family: 'Open Sans', sans-serif;
+    height: 1000vh;
+    }
+
+    .main-screen {
+        padding: 0px var(--horizontal-space);
+    }
+

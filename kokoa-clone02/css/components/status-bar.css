@@ -1,0 +1,37 @@
+
+    .status-bar {
+        position: fixed;
+        top: 0;
+        /*아이콘이 넘어가지않고 한줄에 모두 보이기.*/
+        box-sizing: border-box;
+        /*부모인 nav위에 body의 너비100%를 받는다.
+만약 50%로 했으면 부모인 body너비의 50%만 가진다.*/
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding:  5px 3px;
+    }
+    
+    .status-bar__column {
+        width: 33%;
+    }
+    
+    
+    .status-bar__column:first-child span {
+        margin-right: 5px;
+    }
+    
+    .status-bar__column:nth-child(2) {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .status-bar__column:last-child {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .status-bar__column .fa-battery-quarter {
+        margin: 0px 5px;
+    }

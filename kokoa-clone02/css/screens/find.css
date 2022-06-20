@@ -1,0 +1,145 @@
+
+.cog_items {
+    position: relative;
+}
+
+.cog_dot {
+    background-color: tomato;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+.recommended-friends {
+    margin: 25px 0;
+    padding: 25px 0;
+    border-top: var(--main-border);
+    border-bottom: var(--main-border);
+
+}
+
+.recommended-friends__title {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.recommended-friends span {
+    margin: 100px 0;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.open-chat__header {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;/* =color: rgba(0, 0, 0, 0.5); 이거사용안하는 이유는 코드 복붙대신 해봄.*/
+    margin-bottom: 25px;
+}
+
+.open-chat__header span {
+    opacity: 0.6;
+}
+
+.open-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.open-post__title {
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.open-post__hashtags {
+    text-transform: uppercase; /*글자 대문자로 변환하기*/
+    opacity: 0.6;
+}
+
+.open-post__members {
+    display: flex;
+    align-items: center;
+}
+
+.open-post__members img {
+    margin-top: 7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.open-post__member-count {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.open-post__members .divider {
+    width: 2px;
+    height: 10px;
+    margin:0 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.open-post__member-status {
+    color: #ffb0e0;
+}
+
+.open-post__photo {
+    position: relative;
+}
+
+.open-post__photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.open-post__heart-count {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /*
+    absolute태그 사용할 경우 해당 컨텐츠 크기만큼만 감싸는 것 같아요.
+    position : absolute태그 적용하기 전에 지정된 높이값(height)과 너비값(width)을 안 주고 padding값만 주게되니까
+    지정된 padding값 만큼만 커진 것 같습니다.
+    */
+    bottom: 10px;
+    right: 10px;
+}
+
+.open-post__heart-count span {
+    margin-left: 3px;
+}
+
+@keyframes heartBeat {
+    0%{
+        color: white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(1.5);
+    }
+    100% {
+        color: white;
+        transform: none;
+    }
+}
+
+.open-post__heart-count:hover i {
+    will-change: transfrom;
+    animation: heartBeat 1s linear infinite;
+}

@@ -1,0 +1,57 @@
+<!--index.html로 이름을 정한 이유는 
+대부분의 웹서버가 디폴트로 index.html을 찾아보도록 설정되어있음. (=first란 의미)-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <!--앱의 상단바를 status-bar라고함.-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Servise</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fas fa-battery-quarter fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <div id="no-mobile">
+      <span>Your screen is too big</span>
+    </div>
+
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">
+        If you have a Kokoa Account, log in with your email or phone number.
+      </p>
+    </header>
+
+    <!--form에는 아주 중요한 두가지 속성이 있다. action과 method.
+    action:어떤페이지로 데이터를 보낼지 지정, method:정보를 전송하는 방식으로
+    두가지 방식 중 한가지를 사용할 수 있음.(post & get)
+  post(백엔드 서버에 정보를 전송하는 방식. 현재는 서버가 없기때문에 사용할수 없음.)와
+  get(서버는 필요없지만, 보안에 매우 취약함.). -->
+    <form action="friends.html" method="get" id="login-form">
+      <input name="username" type="text" placeholder="Email or phone" />
+      <input name="password" type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <a href="#">Find Kokoa Account or Password</a>
+    </form>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

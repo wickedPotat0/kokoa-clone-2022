@@ -1,0 +1,49 @@
+/* user-component는 두개의 컬럼을 가진 div box라고 생각하면됨.
+사진과 텍스트 혹은 avatar&title*/
+.user-component {
+    justify-content: space-between;
+}
+
+.user-component, /* column에게 플렉스 실행됨.*/
+.user-component__column:first-child {
+    display: flex; /* column 안의 img와 div*/
+    align-items: center;
+}
+
+ /*세개의 유저 컴포넌트 사이즈 중에 미들 사이즈의 형태. 아래 세개모두. 라지는 80*80, 스몰은 60*60*/
+.user-component__avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 35%; /* =27px */
+    margin-right: 20px;
+}
+
+.user-component__title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.user-component__subtitle {
+    margin-top: 8px;
+    font-size: 17px;
+    color: rgba(0,0,0,0.5);
+}
+
+.user-component__avatar--xl {
+    width: 80px;
+    height: 80px;
+}
+
+.user-component__avatar--sm {
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+}
+
+.user-component__title--not-bold {
+    font-weight: 400;
+}
+
+.user-component__column:last-child {
+    color: rgba(0,0,0,0.5);
+}
