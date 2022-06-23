@@ -1,5 +1,8 @@
 :root {
-    --yellow: #FAE100;
-    --horizontal-space: 25px;
-    --main-border: 1px solid rgba(0, 0, 0, 0.2);
+    --purple_zero: #E4DDF1;
+    --purple_one: #DFD0F0;
+    --purple_two: #A585D4;
+    --purple_three: #743CB3;
+    --header-padding: 25px 20px;
+
 }

@@ -1,37 +1,49 @@
+.status-bar {
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: 25px;
+}
 
-    .status-bar {
-        position: fixed;
-        top: 0;
-        /*아이콘이 넘어가지않고 한줄에 모두 보이기.*/
-        box-sizing: border-box;
-        /*부모인 nav위에 body의 너비100%를 받는다.
-만약 50%로 했으면 부모인 body너비의 50%만 가진다.*/
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding:  5px 3px;
+.status-bar__column {
+  font-size: 16px;
+  text-align: center;
+}
+
+.status-bar__column:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.fa-signal, .fa-battery-quarter {
+    margin: 0px 3px;
+}
+
+@keyframes batteryBeat {
+    0%{
+        color: orange;
+        transform: none;
     }
-    
-    .status-bar__column {
-        width: 33%;
+    50%{
+        color: red;
+        transform: scale(1.2);
     }
-    
-    
-    .status-bar__column:first-child span {
-        margin-right: 5px;
+    100% {
+        color: orange;
+        transform: none;
     }
-    
-    .status-bar__column:nth-child(2) {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .status-bar__column:last-child {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    
-    .status-bar__column .fa-battery-quarter {
-        margin: 0px 5px;
-    }
+}
+
+.fa-battery-quarter {
+    color: orange;
+    animation: batteryBeat 0.3s linear infinite;
+}
+
+

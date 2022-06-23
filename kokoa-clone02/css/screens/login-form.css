@@ -1,71 +1,120 @@
-.welcome-header {
-    margin: 90px 0px;
+body {
+    background-color: #000000;
+}
 
-    /*flex를 사용할 수 도 있지만, h1과 같은 텍스트를 다루는 것이기 떄문에
-    그냥 이걸로 사용 */
+.top-btn {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.top-btn span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
     text-align: center;
+    margin-right: 5px;
+}
 
-    /* 플렉스를 사용하는 이유는 아래의 welcom-header__text 정렬을 위해서.
-    text의 경우 사이즈를 늘릴 수 없게 width를 사용하게 됨.
-    그러다 보면 정렬이 title과 어긋남. 그걸 교정해주기 위해, 아래의 세가지를 사용.(flex set)*/
+.top-btn_tomato {
+    background-color: tomato;
+}
+
+.top-btn_orange {
+    background-color: orange;
+}
+
+.top-btn_green {
+    background-color: #2CC93F;
+}
+
+.top-btn span > i {
+    padding-top: 2px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.top-btn span > i:hover {
+    opacity: 0.5;
+}
+
+.login-bubble {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-top: 85px;
+    margin-bottom: 40px;
 }
 
-.welcome-header__title {
-    margin-bottom: 20px;
-    font-size: 25px;
+.login-bubble span:first-child {
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    top: 70px;
 }
 
-.welcome-header__text {
-    width: 60%;
-    opacity: 0.7; /*텍스트의 불투명도를 바꿔줌.*/
-    
+.fa-comment {
+    color: var(--purple_three);
 }
-
 
 #login-form {
     display: flex;
     flex-direction: column;
-    margin: 0px 30px;
+    margin: 0 50px;    
 }
 
 #login-form input {
+    background-color: white;
     border: none;
-    padding: 15px 0px;
-    font-size: 18px;
-    margin-bottom: 25px;
+    padding: 15px 0;
+    font-size: 20px;
+    
 }
-
-/* :not()이란 어떤 것만 적용되지 않길 바랄때 사용하는 것. */
-/*아래의 focus보다 위에 있어야 트랜지션이 작동된다. 주의할것.*/
-#login-form input:not([type="submit"]) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: border-color 0.3s ease-in-out;
-}
-
 
 #login-form input::placeholder {
-    color: rgba(0, 0, 0, 0.4);
+   text-align: center;
+   color: rgba(128, 128, 128, 0.5);
+   font-weight: 400;
+}
+
+#login-form input[type="submit"] { 
+    margin-top: 10px;
+    color: white;
+    background-color: var(--purple_three);
+}
+
+#login-form input:not([type="submit"]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-bottom 0.3s ease-in-out;
 }
 
 #login-form input:focus {
-    border-color: var(--yellow);
+    border-bottom: 2px solid var(--purple_three);
 }
 
 
-#login-form input[type="submit"] {
-    background-color: var(--yellow);
-    cursor: pointer;
-    padding: 20px 0px;
-    border-radius: 5px;
+
+.login-form__loginbox {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
 }
 
-#login-form a {
-    text-align: center;
-    text-decoration: none;
-    /*상속이라는 뜻의 inherit 색상을 받아오는 것. 디폴트는 블랙*/
-    color: inherit;
-    font-size: 13px;
+.login-form__loginbox > * {
+    margin-right: 5px;
+}
+
+.login-form__loginbox label {
+    color: white;
+}
+
+.login-form__loginbox i {
+    color: var(--purple_two);
 }
