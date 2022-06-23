@@ -52,3 +52,12 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+input {
+	border-style: none ;
+	outline: none;
+}
+
+input:focus {
+	border: none;
+}
