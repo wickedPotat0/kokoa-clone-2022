@@ -2,30 +2,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--horizontal-space);
-    padding-top: 40px;
-   
-   
+    padding: var(--header-padding); /*25px 20px;*/
+    padding-top: 45px;
+    color: white;
 }
-.screen-header__title {
+
+.screen-header h1 {
     font-size: 28px;
     font-weight: 600;
 }
 
-.screen-header__icons span {
-    margin-left: 25px;
+.screen-header__items span {
+    padding-left: 20px;
 }
 
-@keyframes rotateCog {
-    from {
-        transform: none;
-    }
-    to {
-        transform: rotateZ(360deg);
-    }
+@keyframes sizeUpHover {
+   0% {
+    transform: none;
+   }
+   50% {
+    transform: scale(2.0, 1.5);
+   }
+   100% {
+    transform: scale(1.5, 1.0 );
+   }
 }
 
-
-.screen-header__icons .fa-cog:hover {
-    animation: rotateCog 1s linear infinite;
+.screen-header__items span > i:hover {
+    cursor: pointer;
+    animation: sizeUpHover 0.7s ease-in-out;
 }
+
